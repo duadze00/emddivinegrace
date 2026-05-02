@@ -1,0 +1,11 @@
+{%extends 'base.html'%} {%block head%} {%endblock%} {%block body%}
+<nav style="display: flex; justify-content: space-between; align-items: center">
+  <a href="{{ url_for('photoshop') }}">Adobe Photoshop</a>
+  <a href="{{ url_for('aftereffects') }}">Adobe After Effects</a>
+  <a href="{{ url_for('illustrator') }}">Adobe Illustrator</a>
+  <a href="{{ url_for('coreldraw') }}">CorelDRAW</a>
+  <a href="{{ url_for('figma') }}">Figma</a>
+  <a href="{{ url_for('canva') }}">Canva</a>
+</nav>
+<main>{% block tools_content %}{% endblock %}</main>
+{%endblock%}

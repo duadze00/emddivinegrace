@@ -1,0 +1,41 @@
+:root {
+  --primary-color: blue;
+  --secondary-color: yellow;
+  --bg: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  padding: 1rem;
+  max-width: 100%;
+}
+main {
+  margin: 1rem;
+}
+h1 {
+  color: var(--primary-color);
+  margin: 1rem auto;
+}
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+}
+footer {
+  background-color: var(--bg);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 2rem;
+}
+footer p {
+  font-size: 14px;
+  line-height: 2rem;
+}

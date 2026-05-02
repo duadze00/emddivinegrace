@@ -1,0 +1,87 @@
+{%extends 'base.html'%} {%block head%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='register.css')}}"
+/>{%endblock%} {%block body%}
+<section>
+  <article>
+    <h3>Register here</h3>
+    <p>
+      Note: All fields marked with <span class="required">*</span> means
+      required
+    </p>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
+    <p class="exist">{{ message }}</p>
+    {% endfor %} {% endif %} {% endwith %}
+    <form method="POST" action="{{ url_for('register') }}">
+      <label for="firstname"
+        >First name: <span class="required">*</span>
+      </label>
+      <input
+        type="text"
+        id="firstname"
+        name="user_firstname"
+        placeholder="First name"
+      />
+      <label for="surname">Last name: <span class="required">*</span></label>
+      <input
+        type="text"
+        id="surname"
+        name="user_surname"
+        placeholder="Surname"
+      />
+      <label>Date of Birth <span class="required">*</span></label>
+
+      <div class="dob-group">
+        <input type="number" name="day" placeholder="DD" min="1" max="31" />
+        <input type="number" name="month" placeholder="MM" min="1" max="12" />
+        <input
+          type="number"
+          name="year"
+          placeholder="YYYY"
+          min="1900"
+          max="2026"
+        />
+      </div>
+      <label for="course">Course: <span class="required">*</span></label>
+      <select name="course" id="course">
+        <option value="default">---- Select course ----</option>
+        <option value="sonography">Sonography</option>
+        <option value="programming">Programming</option>
+        <option value="design">Graphic Design</option>
+      </select>
+      <label for="email">Email: <span class="required">*</span></label>
+      <input
+        type="email"
+        id="email"
+        name="user_email"
+        placeholder="useremail@gmail.com"
+      />
+      <label for="password">Password: <span class="required">*</span></label>
+      <input
+        type="password"
+        id="password"
+        name="user_password"
+        placeholder="Create password"
+      />
+      <label for="password"
+        >Confirm password: <span class="required">*</span></label
+      >
+      <input
+        type="password"
+        id="password"
+        name="confirm_user_password"
+        placeholder="Confirm password"
+      />
+      <small class="errors">Invalid input</small>
+      <button>Submit</button>
+    </form>
+    <p>
+      Already has an account
+      <a href="{{url_for('login')}}" id="direct_to_login">login</a>
+    </p>
+  </article>
+</section>
+<script src="{{url_for('static', filename='register.js')}} "></script>
+{%endblock%}
