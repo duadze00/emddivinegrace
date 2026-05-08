@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, flash, redirect, url_for
-from website.database import load, save
+from database import load, save
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
