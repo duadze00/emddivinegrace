@@ -1,0 +1,164 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= ROOT ================= */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #f59e0b;
+  --bg-color: #050816;
+  --white-color: #ffffff;
+  --light-color: #d1d5db;
+  --small-radius: 0.6rem;
+  --medium-radius: 1rem;
+  --transition: 0.3s ease;
+}
+
+/* ================= HTML ================= */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: rgba(5, 8, 22, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  padding: 1.5rem 5%;
+}
+
+/* ================= NAVBAR CONTAINER ================= */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+/* ================= NAVIGATION MENU ================= */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+/* ================= TOPICS ================= */
+.topics {
+  position: relative;
+}
+
+/* ================= ACTIVE LINKS ================= */
+.topics__active {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: var(--small-radius);
+  transition: var(--transition);
+  display: block;
+}
+/* Hover */
+.topics__active:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--secondary-color);
+}
+
+/* ================= DROPDOWN ================= */
+.subtopics {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 24rem;
+  background: rgba(15, 23, 42, 0.98);
+  overflow: hidden;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+/* Show Dropdown */
+.topics:hover .subtopics {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ================= SUBTOPIC ITEMS ================= */
+.subtopics__item a {
+  display: block;
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 1.2rem 1.5rem;
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+/* Hover */
+.subtopics__item a:hover {
+  background: var(--primary-color);
+}
+
+/* ================= MAIN ================= */
+.main {
+  padding: 5%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 5rem 0;
+}
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+.hero p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  max-width: 70rem;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--bg-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 3rem 5%;
+}
+.footer p {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+/* ================= SPAN ================= */
+span {
+  color: var(--secondary-color);
+}
