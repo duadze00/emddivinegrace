@@ -3,294 +3,314 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" href="/images/emd_logo.svg" />
     <title>EMD Divine Grace</title>
   </head>
   <body>
+    <!-- Navigation Section -->
     <header>
-      <!-- Navigation bar -->
-      <nav class="navbar">
-        <a href="index.html" class="logo"
-          ><img src="/images/logo.png" alt="Logo"
-        /></a>
-        <button class="hamburger" aria-label="Open navigation menu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M4 7H20"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M4 12H20"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M4 17H20"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-        <button class="close-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M6 6L18 18"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M18 6L6 18"
-              stroke="white"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
+      <!-- Navigation Bar -->
+      <nav id="nav_bar">
+        <div class="navbar__container">
+          <!-- Logo -->
+          <div class="navbar__item">
+            <a href="/index.html">
+              <img
+                src="/images/emd_logo.svg"
+                alt="Logo"
+                class="navbar__item--logo"
+            /></a>
+          </div>
+
+          <!-- Hamburger Sign -->
+          <div class="navbar__item">
+            <button class="navbar__item--hamburger">
+              <img src="/images/hamburger.svg" alt="" />
+            </button>
+          </div>
+        </div>
       </nav>
-
-      <!-- Show this sidebar on big screen -->
-      <ul class="sidebar">
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">References</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
     </header>
-
-    <!-- Use this to cover page when hamburger is clicked -->
-    <aside id="cover"></aside>
-
     <main>
       <!-- Hero Section -->
-      <section id="hero">
-        <h1><span>EMD</span> Divine Grace</h1>
+      <section class="hero">
+        <div class="hero__content">
+          <h1><span>EMD</span> Divine Grace Learning Hub</h1>
+          <p>
+            Learn sonography, programming and graphic design with practical
+            projects.
+          </p>
+          <div class="hero__links">
+            <a href="/registrations/register.html">Start Now</a>
+            <a href="#about">Learn More</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img src="/images/hero.svg" alt="Hero Illustration" />
+        </div>
+      </section>
+
+      <!-- Brand Section -->
+      <section id="brands">
+        <h2>Our Platform</h2>
         <p>
-          With us you will learn more in all our programs with both theory and
-          real world experience with professionals. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Doloremque aliquid libero ipsam? In,
-          harum a quidem dolore at tempore provident repudiandae et, magni
-          itaque perferendis cum delectus doloremque reprehenderit
-          necessitatibus? Aut doloremque cum voluptas unde, accusantium
-          aspernatur laboriosam possimus, sapiente consequatur quidem eligendi
-          nemo? Explicabo distinctio libero cumque nisi minus, eaque eveniet
-          unde pariatur voluptatibus eius deserunt omnis, facere et! Nam quae
-          sit, laudantium ipsam optio mollitia consequuntur possimus quos odit!
-          Ad dolore delectus corrupti quod mollitia, consectetur perferendis id
-          nam saepe aspernatur vero odit voluptate porro, fugiat unde
-          necessitatibus.
+          EMD Divine Grace currently operates as a digital learning platform
+          focused on delivering high-quality educational content through our
+          website. We are actively working on expanding into a mobile
+          application to make learning more accessible, flexible, and convenient
+          for all users.
+        </p>
+        <p>
+          Our goal is to create a smooth learning experience across multiple
+          devices, allowing students to study anytime, anywhere without
+          limitations.
         </p>
       </section>
 
-      <!-- Features -->
-      <section id="features">
-        <h2>Services</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis illo,
-          eaque laboriosam sit tempora repudiandae nulla odit soluta, doloremque
-          cum ut quibusdam nemo suscipit vel labore praesentium exercitationem
-          deleniti. Officiis. Quasi reiciendis est eligendi quia quas voluptas
-          veniam modi, corrupti voluptatibus odio et! Accusamus excepturi
-          aperiam distinctio cumque voluptatibus pariatur debitis, ab
-          dignissimos, fugit voluptatem placeat cupiditate adipisci, culpa
-          sequi. Amet alias provident ad eligendi molestias voluptas, excepturi
-          id tempore. Dolore fugit placeat tempora ipsum nihil est. Numquam ab
-          ea maiores aliquid. Non, atque aspernatur nemo culpa et laboriosam!
-          Autem.
-        </p>
-        <div id="features-container">
-          <article class="features-card">
+      <!-- Features Section -->
+      <section class="features">
+        <div class="features__header">
+          <h2>What You Will Learn</h2>
+          <p>
+            Practical, structured learning paths designed to take you from
+            beginner to job-ready in real-world skills.
+          </p>
+        </div>
+        <div class="features__container">
+          <div class="features__card">
+            <div class="features__icon">
+              <img src="/images/medical.svg" alt="Sonography Icon" />
+            </div>
             <h3>Sonography</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-              neque nobis, incidunt nesciunt ut voluptas nemo alias. Corporis
-              aperiam deleniti magnam voluptatem velit non voluptatibus et.
-              Dolore, quisquam. Dolorum, expedita?
+              Understand ultrasound imaging, anatomy recognition, and clinical
+              scanning techniques used in real healthcare environments.
             </p>
-            <video
-              src="Rovsing, Psoas, and  Obturator Signs [6LrL4ysi_AE].mp4"
-              controls
-              autoplay
-              muted
-            ></video>
-            <a href="#">Start now</a>
-          </article>
-
-          <article class="features-card">
-            <h3>Software Engineering</h3>
+          </div>
+          <div class="features__card">
+            <div class="features__icon">
+              <img src="/images/code.svg" alt="Programming Icon" />
+            </div>
+            <h3>Programming</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              libero, sequi voluptates aliquam ducimus possimus qui pariatur in
-              repellat ea maiores illum obcaecati laboriosam ab vero quia ullam.
-              Adipisci, autem.
+              Learn modern web development including HTML, CSS, JavaScript and
+              project-based coding for real-world applications.
             </p>
-            <video
-              src="Rovsing, Psoas, and  Obturator Signs [6LrL4ysi_AE].mp4"
-              controls
-              autoplay
-              muted
-            ></video>
-            <a href="#">Start now</a>
-          </article>
-
-          <article class="features-card">
+          </div>
+          <div class="features__card">
+            <div class="features__icon">
+              <img src="/images/design.svg" alt="Design Icon" />
+            </div>
             <h3>Graphic Design</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque accusantium odit optio ducimus quaerat sed iusto et
-              minus voluptate suscipit excepturi porro ratione repudiandae,
-              soluta totam consequatur temporibus nihil ipsam!
+              Master visual communication, branding, layouts, and professional
+              design tools used in the creative industry.
             </p>
-            <video
-              src="Rovsing, Psoas, and  Obturator Signs [6LrL4ysi_AE].mp4"
-              controls
-              autoplay
-              muted
-            ></video>
-            <a href="#">Start now</a>
-          </article>
+          </div>
         </div>
       </section>
 
-      <!-- About / Info -->
+      <!-- About Us Section -->
       <section id="about">
-        <article>
-          <h2>About EMD Divine Grace</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            ipsum, sint quia architecto tempora odit sapiente? Laborum,
-            dignissimos! Voluptatum ullam voluptas non dolores itaque
-            consequuntur unde perspiciatis eligendi? Quasi, nostrum?
-          </p>
-        </article>
+        <h2>About EMD Divine Grace</h2>
+        <p>
+          EMD Divine Grace is a collaborative learning platform dedicated to
+          helping students build strong, practical skills in sonography,
+          programming, and graphic design. It was created to support learners
+          who want more than just theory, but real-world, hands-on knowledge
+          that prepares them for industry practice.
+        </p>
+        <p>
+          The platform is built and supported by a growing team of educators,
+          developers, and professionals who are passionate about simplifying
+          complex topics and making quality education more accessible.
+        </p>
+        <p>
+          Our goal is to guide learners step-by-step from beginner level to
+          advanced understanding through structured lessons, practical projects,
+          and mentorship-driven learning experiences.
+        </p>
       </section>
 
+      <!-- Contacts Section -->
       <section id="contact">
-        <article>
-          <h2>Contact</h2>
+        <div class="contact__header">
+          <h2>Get In Touch</h2>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-            molestiae, quaerat dolor doloribus atque quia dicta commodi minus
-            culpa iste at iure deleniti nobis quis itaque harum perferendis
-            libero? Perferendis!
+            Have questions about our courses, mentorship, or learning materials?
+            We are always ready to help you start your journey in sonography,
+            programming, and graphic design.
           </p>
-          <a href="mailto:duadze00@gmail.com">Email</a>
-          <a href="https://wa.me/233530352343?text=Hello%20Eric"> WhatsApp </a>
-          <a href="tel:233530352343">Calll</a>
-        </article>
+        </div>
+
+        <div class="contact__container">
+          <!-- CALL -->
+          <a href="tel:+233000000000" class="contact__card">
+            <img src="/images/phone.svg" alt="Call Icon" />
+            <span>Call Us</span>
+          </a>
+
+          <!-- WHATSAPP -->
+          <a
+            href="https://wa.me/233000000000"
+            target="_blank"
+            class="contact__card"
+          >
+            <img src="/images/whatsapp.svg" alt="WhatsApp Icon" />
+            <span>WhatsApp</span>
+          </a>
+
+          <!-- EMAIL -->
+          <a href="mailto:emddivinegrace@email.com" class="contact__card">
+            <img src="/images/email.svg" alt="Email Icon" />
+            <span>Email</span>
+          </a>
+          <!-- TELEGRAM -->
+          <a
+            href="https://t.me/yourusername"
+            target="_blank"
+            class="contact__card"
+          >
+            <img src="/images/telegram.svg" alt="Telegram Icon" />
+            <span>Telegram</span>
+          </a>
+        </div>
       </section>
 
-      <!-- Testimonials -->
-      <section id="reviews">
-        <h2>Testimonial</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam optio
-          odit quibusdam veritatis repellendus possimus consectetur illo rem
-          similique qui fugiat necessitatibus vero, dolorem minus error iusto ab
-          voluptas esse! Esse repellendus, debitis nisi ipsam dignissimos autem
-          odit atque dolorum, dolor libero assumenda alias! Exercitationem et
-          dolorem, soluta temporibus non eaque, tenetur repudiandae delectus
-          nihil optio aut blanditiis rerum recusandae! Exercitationem atque nemo
-          officiis cum quod vero itaque ullam! Culpa cumque, illum aut eligendi
-          incidunt officia in sequi nihil ea debitis sapiente porro minus
-          laudantium temporibus fugit. Ad, maiores molestiae.
+      <!-- Statistics Section -->
+      <section class="stats">
+        <h2>Trusted By Thousands</h2>
+
+        <p class="stats__description">
+          Learn practical sonography, programming and graphic design skills with
+          real-world projects and guidance.
         </p>
-        <div class="testimonial-container">
-          <div class="testimonial-children">
-            <img src="/images/ERIC.png" alt="" />
-            <h3>Eric Mawule Duadze</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio quo odit omnis corrupti laborum.
-            </p>
+        <div class="stats__container">
+          <div class="stats__items">
+            <div class="stats__icon">
+              <img src="/images/users.svg" alt="Users" />
+            </div>
+            <h3>10K+</h3>
+            <p>Students</p>
           </div>
-          <div class="testimonial-children">
-            <img src="/images/ERIC.png" alt="" />
-            <h3>Patrick Darkwah</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio quo odit omnis corrupti laborum.
-            </p>
+          <div class="stats__items">
+            <div class="stats__icon">
+              <img src="/images/projects.svg" alt="Projects" />
+            </div>
+            <h3>500+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stats__items">
+            <div class="stats__icon">
+              <img src="/images/satisfaction.svg" alt="Satisfactions" />
+            </div>
+            <h3>95%</h3>
+            <p>Satisfaction</p>
           </div>
         </div>
       </section>
 
-      <!-- Pricing or CTA -->
-      <section id="pricing">
-        <h2>Pricings</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          repellendus perferendis dicta eveniet quisquam consequatur facere
-          veniam esse fugit sit. Non at omnis animi eligendi? Deserunt sunt
-          dicta at aspernatur! In voluptate aperiam at atque quibusdam, rem
-          ullam modi quas odit eveniet, inventore ducimus asperiores reiciendis
-          iste provident fuga error voluptatum ipsam, incidunt illo blanditiis
-          aut nihil ratione repellendus. Eligendi! Molestiae voluptate eligendi
-          cumque, tenetur, maiores minima, aperiam vero nesciunt illum
-          laboriosam dignissimos. Earum illo reiciendis sed exercitationem
-          consequuntur nisi pariatur, commodi magnam cupiditate, eaque corporis
-          dolores debitis tempora laudantium?
-        </p>
-        <div class="pricing-container">
-          <div class="pricing-items">
-            <h3>Free section</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <a href="#">Free Courses</a>
+      <!-- Testimonial Section -->
+      <section class="testimonials">
+        <div class="testimonials__header">
+          <h2>What Our Students Say</h2>
+
+          <p>
+            Students and learners from different fields continue to grow their
+            skills with EMD Divine Grace. Here are real experiences shared by
+            members of our learning community.
+          </p>
+        </div>
+
+        <div class="testimonial__container">
+          <div class="testimonial__items">
+            <div class="testimonial__items--image">
+              <img src="/images/ERIC.png" alt="Student Image" />
+            </div>
+
+            <div class="testimonial__items--text">
+              <p>
+                “The lessons are easy to understand and very practical. I
+                improved my understanding of programming and gained confidence
+                in building real projects.”
+              </p>
+              <h4>Michael A.</h4>
+            </div>
           </div>
-          <div class="pricing-items">
-            <h3>Paid section</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <a href="#">Paid Courses</a>
+
+          <div class="testimonial__items">
+            <div class="testimonial__items--image">
+              <img src="/images/ERIC.png" alt="Student Image" />
+            </div>
+            <div class="testimonial__items--text">
+              <p>
+                “EMD Divine Grace helped me understand sonography concepts in a
+                simple and professional way. The teaching style is excellent.”
+              </p>
+              <h4>Priscilla K.</h4>
+            </div>
+          </div>
+
+          <div class="testimonial__items">
+            <div class="testimonial__items--image">
+              <img src="/images/ERIC.png" alt="Student Image" />
+            </div>
+            <div class="testimonial__items--text">
+              <p>
+                “I learned graphic design principles and practical skills that
+                helped me create professional designs for clients.”
+              </p>
+              <h4>Daniel O.</h4>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- FAQ -->
+      <!-- Frequently Asked Questions -->
       <section id="faq">
-        <h2>Why learn with us</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-          voluptate tempora nobis mollitia expedita fugiat repudiandae nemo
-          beatae dignissimos? Doloremque illum assumenda minus aliquam maiores
-          beatae ab. Esse, molestiae nemo!
-        </p>
+        <div class="faq__header">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Everything you need to know about how EMD Divine Grace works, what
+            you get, and how to start learning.
+          </p>
+        </div>
+
+        <div class="faq__container">
+          <div class="faq__item">
+            <h3>Is it free to join?</h3>
+            <p>
+              Yes. All core learning content is free. You can register and start
+              learning immediately without any payment.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h3>How does the platform work?</h3>
+            <p>
+              After registration, you gain access to structured lessons in
+              sonography, programming and graphic design. Each course is
+              designed with practical examples and real-world projects to help
+              you learn by doing.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <!-- Get Startd -->
-      <section id="get-started">
-        <h2>Get started now</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
-          itaque illum dolorem nemo. Dicta id natus odit asperiores vitae
-          delectus eveniet fuga quasi reprehenderit distinctio, sint quisquam
-          minima, fugiat minus.
-        </p>
-        <a href="#">Register</a>
+      <!-- CTA Section -->
+      <section class="cta">
+        <h2>Ready to get started?</h2>
+        <p>Start learning practical skills today.</p>
+        <a href="/registrations/register.html">Join Now</a>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
       <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
+      <p>Learn, Build and Grow</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

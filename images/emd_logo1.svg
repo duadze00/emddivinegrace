@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 300 100"
+width="300" height="100">
+
+  <!-- Background circle accent -->
+  <circle cx="45" cy="50" r="28" fill="#2563eb" opacity="0.1"/>
+
+  <!-- Main EMD Text -->
+  <text x="20" y="62"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="34"
+        font-weight="700"
+        fill="#2563eb">
+    EMD
+  </text>
+
+  <!-- Small divine cross accent -->
+  <line x1="60" y1="20" x2="60" y2="40"
+        stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="30" x2="70" y2="30"
+        stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Divider line -->
+  <line x1="100" y1="25" x2="100" y2="75"
+        stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Divine Grace Text -->
+  <text x="115" y="45"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="16"
+        font-weight="600"
+        fill="#111">
+    Divine
+  </text>
+
+  <text x="115" y="70"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="16"
+        font-weight="600"
+        fill="#111">
+    Grace
+  </text>
+
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 160 80"
+     width="100%" height="100%">
+
+  <!-- EMD (Centered horizontally at x=80) -->
+  <text x="60" y="38"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="36"
+        font-weight="800"
+        fill="#2563eb"
+        text-anchor="middle">
+    EMD
+  </text>
+
+  <!-- Yellow accent dot (Moved further right and slightly up away from the D) -->
+  <circle cx="125" cy="20" r="7" fill="#f59e0b"/>
+
+  <!-- Divine Grace (Centered horizontally at x=80) -->
+  <text x="80" y="70"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="18"
+        font-weight="600"
+        fill="#ffffff"
+        letter-spacing="1"
+        text-anchor="middle">
+    Divine Grace
+  </text>
+
+</svg>

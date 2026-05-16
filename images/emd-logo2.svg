@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 260 60"
+width="260" height="60">
+
+  <!-- EMD -->
+  <text x="0" y="40"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="34"
+        font-weight="800"
+        fill="#2563eb">
+    EMD
+  </text>
+
+  <!-- Accent dot / grace symbol -->
+  <circle cx="95" cy="18" r="4" fill="#f59e0b"/>
+
+  <!-- Divine Grace -->
+  <text x="110" y="40"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="20"
+        font-weight="600"
+        fill="#111">
+    Divine Grace
+  </text>
+
+</svg>

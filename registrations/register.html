@@ -1,87 +1,81 @@
-{%extends 'base.html'%} {%block head%}
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename='register.css')}}"
-/>{%endblock%} {%block body%}
-<section>
-  <article>
-    <h3>Register here</h3>
-    <p>
-      Note: All fields marked with <span class="required">*</span> means
-      required
-    </p>
-    {% with messages = get_flashed_messages() %} {% if messages %} {% for
-    message in messages %}
-    <p class="exist">{{ message }}</p>
-    {% endfor %} {% endif %} {% endwith %}
-    <form method="POST" action="{{ url_for('register') }}">
-      <label for="firstname"
-        >First name: <span class="required">*</span>
-      </label>
-      <input
-        type="text"
-        id="firstname"
-        name="user_firstname"
-        placeholder="First name"
-      />
-      <label for="surname">Last name: <span class="required">*</span></label>
-      <input
-        type="text"
-        id="surname"
-        name="user_surname"
-        placeholder="Surname"
-      />
-      <label>Date of Birth <span class="required">*</span></label>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/register.css" />
+    <title>EMD Divine Grace</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html" class="logo"
+          ><img src="/images/logo.png" alt="Logo"
+        /></a>
+        <a href="/paid_course/paid_course.html" id="nav__paid-course"
+          >Paid Courses</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h3>Register here</h3>
+        <p>
+          Note: All fields marked with <span class="required">*</span> means
+          required
+        </p>
+        <form action="">
+          <label for="username">Username<span class="required">*</span></label>
+          <input type="text" id="username" name="username" />
+          <label for="email">Email<span class="required">*</span></label>
+          <input type="email" id="user-email" name="user-email" />
+          <label for="password">Password<span class="required">*</span></label>
+          <input type="password" name="password" id="password" />
+          <label for="password"
+            >Confirm Password<span class="required">*</span></label
+          >
+          <input
+            type="confirm_password"
+            name="confirm_password"
+            id="confirm_password"
+          />
+          <label for="user-number"
+            >Phone Number<span class="required">*</span></label
+          >
+          <input type="tel" name="user-number" id="user-number" />
+          <label for="date-of-birth"
+            >Date of Birth<span class="required">*</span></label
+          >
+          <input type="date" />
+          <label for="gender"> Gender<span class="required">*</span></label>
+          <div id="gender">
+            <div class="gender__child">
+              <label for="male">Male</label>
+              <input type="radio" id="male" name="gender" value="male" />
+            </div>
+            <div class="gender__child">
+              <label for="female">Female</label>
+              <input type="radio" id="female" name="gender" value="female" />
+            </div>
+          </div>
+          <label for="coures">Course<span class="required">*</span></label>
+          <select name="course" id="course">
+            <option value="default">Select one below</option>
+            <option value="sonography">Sonography</option>
+            <option value="programming">Software Engineering</option>
+            <option value="graphic_design">Graphic Design</option>
+          </select>
+          <button value="submit">Submit</button>
+        </form>
 
-      <div class="dob-group">
-        <input type="number" name="day" placeholder="DD" min="1" max="31" />
-        <input type="number" name="month" placeholder="MM" min="1" max="12" />
-        <input
-          type="number"
-          name="year"
-          placeholder="YYYY"
-          min="1900"
-          max="2026"
-        />
-      </div>
-      <label for="course">Course: <span class="required">*</span></label>
-      <select name="course" id="course">
-        <option value="default">---- Select course ----</option>
-        <option value="sonography">Sonography</option>
-        <option value="programming">Programming</option>
-        <option value="design">Graphic Design</option>
-      </select>
-      <label for="email">Email: <span class="required">*</span></label>
-      <input
-        type="email"
-        id="email"
-        name="user_email"
-        placeholder="useremail@gmail.com"
-      />
-      <label for="password">Password: <span class="required">*</span></label>
-      <input
-        type="password"
-        id="password"
-        name="user_password"
-        placeholder="Create password"
-      />
-      <label for="password"
-        >Confirm password: <span class="required">*</span></label
-      >
-      <input
-        type="password"
-        id="password"
-        name="confirm_user_password"
-        placeholder="Confirm password"
-      />
-      <small class="errors">Invalid input</small>
-      <button>Submit</button>
-    </form>
-    <p>
-      Already has an account
-      <a href="{{url_for('login')}}" id="direct_to_login">login</a>
-    </p>
-  </article>
-</section>
-<script src="{{url_for('static', filename='register.js')}} "></script>
-{%endblock%}
+        <p>
+          Already has an account
+          <a href="/registrations/login.html">Login</a>
+        </p>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
+  </footer>
+</html>

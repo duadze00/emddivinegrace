@@ -1,25 +1,41 @@
-{%extends 'base.html'%} {%block head%}
-<link rel="stylesheet" href="{{ url_for('static', filename='login.css')}}" />
-{%endblock%} {%block body%}
-<div class="top-actions">
-  <a href="{{url_for('register')}}" class="regis">Register</a>
-</div>
-<section>
-  <article>
-    <p id="para">Please log in to continue</p>
-    {% with messages = get_flashed_messages() %} {% if messages %} {% for
-    message in messages %}
-    <p class="exist">{{ message }}</p>
-    {% endfor %} {% endif %} {% endwith %}
-    <form method="POST">
-      <label for="email">Email Address: </label>
-      <input type="email" id="user_email" name="email" />
-      <label for="password">Password: </label>
-      <input type="password" id="password" name="password" />
-      <button id="login_btn">LOGIN</button>
-    </form>
-    <a href="{{url_for('forgot_password')}}" class="reset">Forgot Password</a>
-  </article>
-</section>
-<script src="{{ url_for('static', filename='login.js')}}"></script>
-{%endblock%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/login.css" />
+    <title>EMD Divine Grace</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html" class="logo"
+          ><img src="/images/logo.png" alt="Logo"
+        /></a>
+        <a href="/paid_course/paid_course.html" id="nav__paid-course">Paid Courses</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1><span>EMD</span> Divine Grace</h1>
+        <p>Please login to continue</p>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="email" id="user-email" name="user-email" />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+
+          <button value="submit">Login</button>
+        </form>
+
+        <p class="reset">
+          Forgotten Password,
+          <a href="/registrations/forgot_password.html">Reset Password</a>
+        </p>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
+  </footer>
+</html>
