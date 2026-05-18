@@ -1,22 +1,7 @@
-const openBtn = document.querySelector(".hamburger");
-const closeBtn = document.querySelector(".close-btn");
-const cover = document.querySelector("#cover");
-const sideBar = document.querySelector(".sidebar");
+// ==================================== HTML CONTENTS ====================================
+const hamburgerBtn = document.querySelector(".navbar__item--hamburger");
+const sideBar = document.querySelector("..side-bar__container");
+const coverPage = document.querySelector(".overlay-cover");
 
-function openSideBar() {
-  sideBar.classList.add("open");
-  cover.classList.add("cover-page");
-  closeBtn.style.display = "block";
-  openBtn.style.display = "none";
-}
-
-function closeSideBar() {
-  sideBar.classList.remove("open");
-  cover.classList.remove("cover-page");
-  closeBtn.style.display = "none";
-  openBtn.style.display = "block";
-}
-
-openBtn.addEventListener("click", openSideBar);
-closeBtn.addEventListener("click", closeSideBar);
-cover.addEventListener("click", closeSideBar);
+// ==================================== EVENT LISTENERS ====================================
+hamburgerBtn.addEventListener("click", () => {});

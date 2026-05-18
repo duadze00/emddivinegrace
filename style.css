@@ -1,6 +1,8 @@
+/* ============================================= ROOT ============================================= */
 :root {
   --primary-color: #2563eb;
   --secondary-color: #f59e0b;
+  --secondary__hover-color: #f5840b;
   --bg-color: #0f172a;
   --btn-hover-color: blue;
   --very-small-padding: 0.5rem;
@@ -16,14 +18,18 @@
   --more-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   --small-gap: 1rem;
   --large-gap: 4rem;
+  --white-hover: #dad1d1;
 }
 
+/* ============================================= RESET ============================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", Helvetica, sans-serif;
 }
+
+/* ============================================= BASE ============================================= */
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -61,7 +67,7 @@ p {
 
 /* ============================================= NAVIGATION BAR ============================================= */
 #nav_bar {
-  padding: var(--small-padding);
+  padding: var(--small-padding) var(--medium-padding);
   background: var(--bg-color);
 }
 .navbar__container {
@@ -72,21 +78,19 @@ p {
 .navbar__item--logo {
   width: 5rem;
   height: 5rem;
-  object-fit: contain;
 }
 .navbar__item--hamburger {
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 1000;
+  position: relative;
+  z-index: 1002;
 }
-.navbar__item--hamburger svg,
-.navbar__item--logo {
+.navbar__item--hamburger svg {
   transition: 0.3s ease;
 }
-.navbar__item--hamburger:hover svg,
-.navbar__item--logo:hover {
+.navbar__item--hamburger:hover svg {
   transform: scale(1.08);
 }
 
@@ -95,11 +99,11 @@ p {
 .register a,
 .contribute a {
   text-decoration: none;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 1.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1.4rem;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
 }
 .register,
 #donate-contribute {
@@ -109,43 +113,59 @@ p {
   background: white;
   color: var(--bg-color);
   font-weight: 600;
+  transition: 0.5s;
+}
+.register a.sign-in {
+  background: var(--secondary-color);
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.register a.sign-in:hover {
+  background: var(--secondary__hover-color);
+}
+.register a.sign-up:hover {
+  background: var(--white-hover);
 }
 
 /* ============================================= COVER ============================================= */
-.hamburger__bg--cover {
-  background: rgba(0, 0, 0, 0.3);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+.overlay-cover {
+  position: fixed;
   inset: 0;
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
   display: none;
 }
 
 /* ============================================= SIDE BAR ============================================= */
-aside {
-  width: 30vh;
+/* Display when hamburger is clicked */
+aside.side-bar__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  max-width: 80%;
   height: 100vh;
   background: var(--bg-color);
-  position: absolute;
-  right: 0;
-  padding: 0 1rem;
+  z-index: 1001;
+  display: none;
+  padding: 2rem;
 }
-ul.side-bar {
+ul.side-bar__item {
   display: flex;
   flex-direction: column;
 }
-.side-bar li {
+.side-bar__item li {
   list-style: none;
 }
-.side-bar li a {
+.side-bar__item li a {
   display: block;
   text-decoration: none;
   color: white;
   padding: 0.5rem;
   font-size: 1.6rem;
 }
-.side-bar li a:hover {
+.side-bar__item li a:hover {
   border-radius: 5px;
   background: rgba(158, 155, 155, 0.4);
 }
@@ -154,7 +174,7 @@ span {
   color: var(--secondary-color);
 }
 
-/* Hero Section  */
+/* ============================================= HERO SECTION ============================================= */
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -244,6 +264,7 @@ span {
   right: -100px;
 }
 
+/* ============================================= BRAND SECTION ============================================= */
 /* PLATFORM SECTION WRAPPER */
 #brands {
   padding: 8rem 5%;
@@ -270,7 +291,7 @@ span {
   color: #333;
 }
 
-/* Features Section */
+/* ============================================= FEATURES SECTION ============================================= */
 .features {
   padding: 8rem 5%;
   background: #f8fafc;
@@ -327,6 +348,7 @@ span {
   line-height: 1.6;
 }
 
+/* ============================================= ABOUT SECTION ============================================= */
 /* ABOUT SECTION WRAPPER */
 #about {
   padding: 8rem 5%;
@@ -347,12 +369,8 @@ span {
   line-height: 1.8;
   color: #555;
 }
-/* OPTIONAL: FIRST PARAGRAPH EMPHASIS */
-#about p:first-of-type {
-  font-size: 1.8rem;
-  color: #333;
-}
 
+/* ============================================= CONTACT SECTION ============================================= */
 /* CONTACT WRAPPER */
 #contact {
   padding: 8rem 5%;
@@ -417,6 +435,7 @@ span {
   font-weight: 600;
 }
 
+/* ============================================= STATISTICS SECTION ============================================= */
 /* Statistics Section */
 .stats {
   text-align: center;
@@ -466,7 +485,8 @@ span {
   transform: translateY(-10px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
-/* Testimonial Section */
+
+/* ============================================= TESTIMONIAL SECTION ============================================= */
 /* SECTION WRAPPER */
 .testimonials {
   padding: 8rem 5%;
@@ -511,7 +531,6 @@ span {
   transform: translateY(-10px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
 }
-
 /* IMAGE */
 .testimonial__items--image img {
   width: 7rem;
@@ -534,12 +553,13 @@ span {
   color: #111;
 }
 
-/* Pricing Section  */
+/* ============================================= PRICING SECTION ============================================= */
 #pricing a {
   text-decoration: underline;
   color: var(--primary-color);
 }
 
+/* ============================================= FAQ SECTION ============================================= */
 /* FAQ SECTION WRAPPER */
 #faq {
   padding: 8rem 5%;
@@ -594,7 +614,7 @@ span {
   line-height: 1.7;
 }
 
-/* CTA Section  */
+/* ============================================= CTA SECTION ============================================= */
 .cta {
   background: linear-gradient(135deg, #0f172a, #2563eb);
   padding: 6rem 2rem;
@@ -634,14 +654,17 @@ span {
   background: white;
   color: black;
 }
-/* Footer */
+/* ============================================= FOOTER SECTION ============================================= */
 footer {
   background-color: var(--bg-color);
-  padding: var(--medium-padding);
+  padding: var(--small-padding) 0;
 }
 footer p {
   color: white;
   text-align: center;
+  font-size: 1.3rem;
+  line-height: 0;
+  margin: var(--medium-margin) 0;
 }
 
 /* ============================================= MEDIA QUERIES ============================================= */
