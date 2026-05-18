@@ -9,12 +9,13 @@
   <body>
     <header>
       <nav>
-        <a href="/index.html" class="logo"
-          ><img src="/images/logo.png" alt="Logo"
+        <a href="/index.html"
+          ><img class="logo" src="/images/emd_logo.svg" alt="Logo"
         /></a>
-        <a href="/paid_course/paid_course.html" id="nav__paid-course"
-          >Paid Courses</a
-        >
+        <div class="register">
+          <a id="sign-in" href="/registrations/login.html">Sign In</a>
+          <a id="sign-up" href="/registrations/register.html">Sign Up</a>
+        </div>
       </nav>
     </header>
     <main>
@@ -47,17 +48,6 @@
             >Date of Birth<span class="required">*</span></label
           >
           <input type="date" />
-          <label for="gender"> Gender<span class="required">*</span></label>
-          <div id="gender">
-            <div class="gender__child">
-              <label for="male">Male</label>
-              <input type="radio" id="male" name="gender" value="male" />
-            </div>
-            <div class="gender__child">
-              <label for="female">Female</label>
-              <input type="radio" id="female" name="gender" value="female" />
-            </div>
-          </div>
           <label for="coures">Course<span class="required">*</span></label>
           <select name="course" id="course">
             <option value="default">Select one below</option>

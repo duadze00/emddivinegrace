@@ -30,6 +30,7 @@ html {
 }
 body {
   background-color: white;
+  position: relative;
 }
 main {
   margin: var(--small-margin);
@@ -57,7 +58,8 @@ p {
   line-height: 1.6;
   font-size: 1.6rem;
 }
-/* Navigation Bar */
+
+/* ============================================= NAVIGATION BAR ============================================= */
 #nav_bar {
   padding: var(--small-padding);
   background: var(--bg-color);
@@ -77,6 +79,7 @@ p {
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 1000;
 }
 .navbar__item--hamburger svg,
 .navbar__item--logo {
@@ -85,6 +88,66 @@ p {
 .navbar__item--hamburger:hover svg,
 .navbar__item--logo:hover {
   transform: scale(1.08);
+}
+
+/* Registration and Login Links */
+.donate a,
+.register a,
+.contribute a {
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+}
+.register,
+#donate-contribute {
+  display: none;
+}
+.register a.sign-up {
+  background: white;
+  color: var(--bg-color);
+  font-weight: 600;
+}
+
+/* ============================================= COVER ============================================= */
+.hamburger__bg--cover {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  display: none;
+}
+
+/* ============================================= SIDE BAR ============================================= */
+aside {
+  width: 30vh;
+  height: 100vh;
+  background: var(--bg-color);
+  position: absolute;
+  right: 0;
+  padding: 0 1rem;
+}
+ul.side-bar {
+  display: flex;
+  flex-direction: column;
+}
+.side-bar li {
+  list-style: none;
+}
+.side-bar li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+.side-bar li a:hover {
+  border-radius: 5px;
+  background: rgba(158, 155, 155, 0.4);
 }
 /* Span Elements */
 span {
@@ -581,6 +644,39 @@ footer p {
   text-align: center;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
+/* ============================================= MEDIA QUERIES ============================================= */
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
+  #donate-contribute,
+  .register {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+  #donate-contribute .donate {
+    display: block;
+  }
+  .register {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .register {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* Small Screens */
+@media (min-width: 450px) {
 }

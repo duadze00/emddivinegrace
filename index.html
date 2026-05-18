@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/images/emd_logo.svg" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>EMD Divine Grace</title>
   </head>
   <body>
@@ -23,9 +23,27 @@
             /></a>
           </div>
 
-          <!-- Hamburger Sign -->
+          <!-- Donate and contribution -->
+          <div class="navbar__item" id="donate-contribute">
+            <div class="donate">
+              <a href="#">Donate</a>
+            </div>
+            <div class="contribute">
+              <a href="#">Contribute</a>
+            </div>
+          </div>
+
+          <!-- Registration and login -->
           <div class="navbar__item">
-            <button class="navbar__item--hamburger">
+            <div class="register">
+              <a class="sign-in" href="/registrations/login.html">Sign In</a>
+              <a class="sign-up" href="/registrations/register.html">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- Hamburger Sign -->
+          <div class="navbar__item hamburger" >
+            <button class="navbar__item--hamburger" aria-label="Open menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -46,6 +64,23 @@
         </div>
       </nav>
     </header>
+
+    <!-- Hamburger clicked cover -->
+    <div class="hamburger__bg--cover"></div>
+
+    <!-- Side bar when Hamburger is clicked -->
+    <aside>
+      <ul class="side-bar">
+        <li><a href="/registrations/register.html">Sign Up</a></li>
+        <li><a href="/registrations/login.html">Sign In</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </aside>
+
     <main>
       <!-- Hero Section -->
       <section class="hero">
@@ -83,7 +118,7 @@
       </section>
 
       <!-- Features Section -->
-      <section class="features">
+      <section class="features" id="courses">
         <div class="features__header">
           <h2>What You Will Learn</h2>
           <p>
@@ -161,14 +196,14 @@
 
         <div class="contact__container">
           <!-- CALL -->
-          <a href="tel:+233000000000" class="contact__card">
+          <a href="tel:+233530352343" class="contact__card">
             <img src="/images/phone.svg" alt="Call Icon" />
             <span>Call Us</span>
           </a>
 
           <!-- WHATSAPP -->
           <a
-            href="https://wa.me/233000000000"
+            href="https://wa.me/233530352343"
             target="_blank"
             class="contact__card"
           >
@@ -177,16 +212,12 @@
           </a>
 
           <!-- EMAIL -->
-          <a href="mailto:emddivinegrace@email.com" class="contact__card">
+          <a href="mailto:emddivinegrace@gmail.com" class="contact__card">
             <img src="/images/email.svg" alt="Email Icon" />
             <span>Email</span>
           </a>
           <!-- TELEGRAM -->
-          <a
-            href="https://t.me/yourusername"
-            target="_blank"
-            class="contact__card"
-          >
+          <a href="https://t.me/Duadze" target="_blank" class="contact__card">
             <img src="/images/telegram.svg" alt="Telegram Icon" />
             <span>Telegram</span>
           </a>
