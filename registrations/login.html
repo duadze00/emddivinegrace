@@ -18,23 +18,39 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section>
-        <h1><span>EMD</span> Divine Grace</h1>
-        <p>Please login to continue</p>
-        <form action="">
-          <label for="email">Email</label>
-          <input type="email" id="user-email" name="user-email" />
+    <main class="auth-container">
+      <section class="auth-card">
+        <!-- BRAND HEADER -->
+        <div class="brand">
+          <img src="/images/emd_logo.svg" alt="EMD Logo" class="brand-logo" />
+          <h2>EMD Divine Grace</h2>
+          <p class="subtitle">Welcome back, please login to continue</p>
+        </div>
+
+        <form action="" method="POST">
+          <label for="user-email">Email</label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            placeholder="you@example.com"
+          />
+
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+          />
 
-          <button value="submit">Login</button>
+          <button type="submit">Login</button>
+
+          <p class="reset">
+            Forgotten password?
+            <a href="/registrations/forgot_password.html">Reset Password</a>
+          </p>
         </form>
-
-        <p class="reset">
-          Forgotten Password,
-          <a href="/registrations/forgot_password.html">Reset Password</a>
-        </p>
       </section>
     </main>
   </body>

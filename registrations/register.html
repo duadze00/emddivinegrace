@@ -18,54 +18,84 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section>
-        <h3>Register here</h3>
-        <p>
-          Note: All fields marked with <span class="required">*</span> means
-          required
-        </p>
-        <form action="">
+    <main class="auth-container">
+      <section class="auth-card">
+        <!-- BRAND AREA -->
+        <div class="brand">
+          <img src="/images/emd_logo.svg" alt="EMD Logo" class="brand-logo" />
+          <h2>EMD Divine Grace</h2>
+          <p class="subtitle">Create your account to get started</p>
+        </div>
+
+        <form action="" method="POST">
           <label for="username">Username<span class="required">*</span></label>
-          <input type="text" id="username" name="username" />
-          <label for="email">Email<span class="required">*</span></label>
-          <input type="email" id="user-email" name="user-email" />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter username"
+          />
+
+          <label for="user-email">Email<span class="required">*</span></label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            placeholder="you@example.com"
+          />
+
           <label for="password">Password<span class="required">*</span></label>
-          <input type="password" name="password" id="password" />
-          <label for="password"
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+          />
+
+          <label for="confirm_password"
             >Confirm Password<span class="required">*</span></label
           >
           <input
-            type="confirm_password"
-            name="confirm_password"
+            type="password"
             id="confirm_password"
+            name="confirm_password"
+            placeholder="••••••••"
           />
+
           <label for="user-number"
             >Phone Number<span class="required">*</span></label
           >
-          <input type="tel" name="user-number" id="user-number" />
+          <input
+            type="tel"
+            id="user-number"
+            name="user-number"
+            placeholder="+233..."
+          />
+
           <label for="date-of-birth"
             >Date of Birth<span class="required">*</span></label
           >
-          <input type="date" />
-          <label for="coures">Course<span class="required">*</span></label>
-          <select name="course" id="course">
-            <option value="default">Select one below</option>
+          <input type="date" id="date-of-birth" name="date-of-birth" />
+
+          <label for="course">Course<span class="required">*</span></label>
+          <select id="course" name="course">
+            <option value="">Select a course</option>
             <option value="sonography">Sonography</option>
             <option value="programming">Software Engineering</option>
             <option value="graphic_design">Graphic Design</option>
           </select>
-          <button value="submit">Submit</button>
-        </form>
 
-        <p>
-          Already has an account
-          <a href="/registrations/login.html">Login</a>
-        </p>
+          <button type="submit">Create Account</button>
+
+          <p class="login-text">
+            Already have an account?
+            <a href="/registrations/login.html">Sign in</a>
+          </p>
+        </form>
       </section>
     </main>
+    <footer>
+      <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
+    </footer>
   </body>
-  <footer>
-    <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
-  </footer>
 </html>
