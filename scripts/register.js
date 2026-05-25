@@ -41,23 +41,26 @@ form.addEventListener("submit", async (e) => {
   /* ===================================== SEND DATA TO SERVER ===================================== */
 
   try {
-    const response = await fetch("http://localhost:5000/register", {
-      method: "POST",
+    const response = await fetch(
+      "https://emddivinegrace.onrender.com/register",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          username,
+          email,
+          password,
+          confirmPassword,
+          phoneNumber,
+          dateOfBirth,
+          course,
+        }),
       },
-
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-        confirmPassword,
-        phoneNumber,
-        dateOfBirth,
-        course,
-      }),
-    });
+    );
 
     const data = await response.json();
 
