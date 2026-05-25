@@ -4,20 +4,12 @@
   --secondary-color: #f59e0b;
   --secondary__hover-color: #f5840b;
   --bg-color: #0f172a;
-  --btn-hover-color: blue;
-  --very-small-padding: 0.5rem;
   --small-margin: 1rem;
   --medium-margin: 2rem;
-  --large-margin: 4rem;
   --small-padding: 1rem;
   --medium-padding: 2rem;
   --large-padding: 4rem;
-  --small-border-radius: 5px;
-  --medium-border-radius: 10px;
   --small-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  --more-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
-  --small-gap: 1rem;
-  --large-gap: 4rem;
   --white-hover: #dad1d1;
 }
 
@@ -39,7 +31,7 @@ body {
   position: relative;
 }
 main {
-  margin: var(--small-margin);
+  margin: var(--small-margin) 0;
 }
 section {
   padding: calc(var(--large-padding) * 2) 5%;
@@ -63,6 +55,11 @@ p {
   margin-bottom: var(--medium-margin);
   line-height: 1.6;
   font-size: 1.6rem;
+}
+a:focus,
+button:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
 }
 
 /* ============================================= NAVIGATION BAR ============================================= */
@@ -145,7 +142,7 @@ aside.side-bar__container {
   right: 0;
   width: 25rem;
   max-width: 80%;
-  height: 100vh;
+  height: 100dvh;
   background: var(--bg-color);
   z-index: 1001;
   display: none;
@@ -168,6 +165,9 @@ ul.side-bar__item {
 .side-bar__item li a:hover {
   border-radius: 5px;
   background: rgba(158, 155, 155, 0.4);
+}
+.side-bar__container.active {
+  transform: translateX(0);
 }
 /* Span Elements */
 span {
@@ -211,7 +211,14 @@ span {
   border-radius: 1rem;
   font-size: 1.6rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.hero__links a,
+.cta a {
+  cursor: pointer;
 }
 .hero__links a:first-child {
   background: #f59e0b;
@@ -237,8 +244,6 @@ span {
   border-radius: 2rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   animation: float 4s ease-in-out infinite;
-}
-.hero__image img {
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
 }
 @keyframes float {
@@ -269,13 +274,13 @@ span {
 #brands {
   padding: 8rem 5%;
   background: #ffffff;
-  text-align: center;
 }
 /* SECTION TITLE */
 #brands h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 2.5rem;
   color: #111;
+  text-align: center;
 }
 /* PARAGRAPHS */
 #brands p {
@@ -297,12 +302,12 @@ span {
   background: #f8fafc;
 }
 .features__header {
-  text-align: center;
   margin-bottom: 5rem;
 }
 .features__header h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 1rem;
+  text-align: center;
 }
 .features__header p {
   max-width: 65ch;
@@ -346,6 +351,7 @@ span {
   font-size: 1.6rem;
   color: #555;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* ============================================= ABOUT SECTION ============================================= */
@@ -353,13 +359,13 @@ span {
 #about {
   padding: 8rem 5%;
   background: linear-gradient(to bottom, #f8fafc, #ffffff);
-  text-align: center;
 }
 /* SECTION TITLE */
 #about h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 3rem;
   color: #111;
+  text-align: center;
 }
 /* PARAGRAPHS */
 #about p {
@@ -375,12 +381,12 @@ span {
 #contact {
   padding: 8rem 5%;
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
-  text-align: center;
 }
 /* HEADER */
 .contact__header h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 2rem;
+  text-align: center;
 }
 .contact__header p {
   max-width: 70ch;
@@ -494,12 +500,12 @@ span {
 }
 /* HEADER */
 .testimonials__header {
-  text-align: center;
   margin-bottom: 5rem;
 }
 .testimonials__header h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 1rem;
+  text-align: center;
 }
 .testimonials__header p {
   max-width: 70ch;
@@ -523,7 +529,6 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   transition: all 0.3s ease;
 }
 /* HOVER EFFECT */
@@ -551,6 +556,7 @@ span {
 .testimonial__items--text h4 {
   font-size: 1.8rem;
   color: #111;
+  text-align: center;
 }
 
 /* ============================================= PRICING SECTION ============================================= */
@@ -567,12 +573,12 @@ span {
 }
 /* HEADER */
 .faq__header {
-  text-align: center;
   margin-bottom: 5rem;
 }
 .faq__header h2 {
   font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 1rem;
+  text-align: center;
 }
 .faq__header p {
   max-width: 70ch;
@@ -621,10 +627,9 @@ span {
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  max-width: 1100px;
+  width: min(1100px, calc(100% - 2rem));
   margin-inline: auto;
 }
-
 .cta h2 {
   color: white;
   font-size: clamp(3rem, 6vw, 5rem);
@@ -698,8 +703,4 @@ footer p {
     display: flex;
     gap: 1rem;
   }
-}
-
-/* Small Screens */
-@media (min-width: 450px) {
 }
