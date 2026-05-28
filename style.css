@@ -2,7 +2,7 @@
 :root {
   --primary-color: #2563eb;
   --secondary-color: #f59e0b;
-  --secondary__hover-color: #f5840b;
+  --secondary_hover-color: #f5840b;
   --bg-color: #0f172a;
   --small-margin: 1rem;
   --medium-margin: 2rem;
@@ -11,6 +11,7 @@
   --large-padding: 4rem;
   --small-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   --white-hover: #dad1d1;
+  --nav-height: 7.5rem;
 }
 
 /* ============================================= RESET ============================================= */
@@ -56,16 +57,18 @@ p {
   line-height: 1.6;
   font-size: 1.6rem;
 }
-a:focus,
-button:focus {
-  outline: 2px solid var(--secondary-color);
-  outline-offset: 3px;
-}
 
 /* ============================================= NAVIGATION BAR ============================================= */
 #nav_bar {
   padding: var(--small-padding) var(--medium-padding);
   background: var(--bg-color);
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+  backdrop-filter: blur(10px);
 }
 .navbar__container {
   display: flex;
@@ -81,14 +84,24 @@ button:focus {
   border: none;
   color: white;
   cursor: pointer;
-  position: relative;
-  z-index: 1002;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
 }
 .navbar__item--hamburger svg {
   transition: 0.3s ease;
 }
 .navbar__item--hamburger:hover svg {
   transform: scale(1.08);
+}
+.close-icon {
+  display: none;
+}
+.navbar__item--hamburger.active .hamburger-icon {
+  display: none;
+}
+.navbar__item--hamburger.active .close-icon {
+  display: block;
 }
 
 /* Registration and Login Links */
@@ -119,7 +132,7 @@ button:focus {
   transition: 0.5s;
 }
 .register a.sign-in:hover {
-  background: var(--secondary__hover-color);
+  background: var(--secondary_hover-color);
 }
 .register a.sign-up:hover {
   background: var(--white-hover);
@@ -138,7 +151,7 @@ button:focus {
 /* Display when hamburger is clicked */
 aside.side-bar__container {
   position: fixed;
-  top: 0;
+  top: var(--nav-height);
   right: 0;
   width: 25rem;
   max-width: 80%;
@@ -161,6 +174,20 @@ ul.side-bar__item {
   color: white;
   padding: 0.5rem;
   font-size: 1.6rem;
+}
+.side-bar__item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.side-bar__item a i {
+  width: 20px;
+  text-align: center;
 }
 .side-bar__item li a:hover {
   border-radius: 5px;
@@ -186,6 +213,7 @@ span {
   background: linear-gradient(135deg, var(--bg-color), var(--primary-color));
   color: white;
   overflow: hidden;
+  margin-top: calc(var(--nav-height) + 0.5rem);
 }
 .hero__content h1 {
   font-size: clamp(4rem, 8vw, 7rem);
@@ -290,11 +318,6 @@ span {
   line-height: 1.8;
   color: #555;
 }
-/* First paragraph emphasis */
-#brands p:first-of-type {
-  font-size: 1.8rem;
-  color: #333;
-}
 
 /* ============================================= FEATURES SECTION ============================================= */
 .features {
@@ -352,6 +375,22 @@ span {
   color: #555;
   line-height: 1.6;
   text-align: left;
+}
+.features__card--btn{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: var(--small-shadow);
+  transition: .3s ease-in-out;
+}
+.features__card--btn:hover{
+  background-color: var(--secondary_hover-color);
+  transform: scale(1.05);
 }
 
 /* ============================================= ABOUT SECTION ============================================= */
@@ -477,6 +516,7 @@ span {
   margin-bottom: 5rem;
   line-height: 1.8;
   color: #555;
+  text-align: left;
 }
 .stats__items {
   background: white;
@@ -542,7 +582,7 @@ span {
   height: 7rem;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
 }
 /* TEXT */
@@ -702,5 +742,19 @@ footer p {
   .register {
     display: flex;
     gap: 1rem;
+  }
+  .side-bar__container {
+    transform: translateX(0);
+    position: static;
+    height: auto;
+  }
+  .overlay-cover {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image img {
+    animation: none;
   }
 }

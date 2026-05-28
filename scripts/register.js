@@ -11,9 +11,7 @@ form.addEventListener("submit", async (e) => {
     .value.trim();
 
   const phoneNumber = document.getElementById("user-number").value.trim();
-
   const dateOfBirth = document.getElementById("date-of-birth").value;
-
   const course = document.getElementById("course").value;
 
   /* ===================================== CHECK EMPTY INPUTS ===================================== */
@@ -88,5 +86,15 @@ form.addEventListener("submit", async (e) => {
     console.log(error);
 
     alert("Something went wrong");
+  }
+});
+
+/* ===================================== DEFAULT COURSE ===================================== */
+// Loading User Input From Index.html
+document.addEventListener("DOMContentLoaded", () => {
+  const selectedCourse = localStorage.getItem("selectedCourse");
+  const select = document.querySelector("select");
+  if (selectedCourse && select) {
+    select.value = selectedCourse;
   }
 });
