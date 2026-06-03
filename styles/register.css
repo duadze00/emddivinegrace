@@ -141,15 +141,22 @@ label {
   font-weight: 600;
   margin: 1rem 0 0.5rem;
 }
-/* inputs */
+/* inputs and select*/
 input,
 select {
+  width: 100%;
   padding: 1.1rem;
   font-size: 1.4rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   outline: none;
   transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+input[type="date"] {
+  width: 100%;
+  display: block;
+  min-width: 0;
 }
 
 /* focus = modern glow */
