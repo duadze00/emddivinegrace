@@ -3,122 +3,223 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../images/emd_logo.svg" />
+    <link rel="icon" href="../../../images/emd_logo.svg" />
+    <link rel="stylesheet" href="../../styles/sonography.css" />
     <title>EMD Divine Grace</title>
   </head>
   <body>
     <header>
-      <nav></nav>
+      <nav>
+        <div class="navbar__container">
+          <div class="navbar__items">
+            <a href="../../index.html" class="navbar__items--logo"
+              ><img src="../../images/emd_logo.svg" alt="Logo"
+            /></a>
+          </div>
+          <div class="navbar__items">
+            <button class="navbar__item--hamburger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-      <div class="overview-grid">
-        <div class="card">
-          <h3>Design Fundamentals</h3>
-          <p>
-            Learn the core principles of graphic design that guide every visual
-            creation, from layout to composition.
-          </p>
-          <ul>
-            <li>Balance & alignment</li>
-            <li>Contrast & hierarchy</li>
-            <li>Spacing & composition</li>
-            <li>Visual flow</li>
-          </ul>
-          <a href="{{url_for('fundamentals')}}" class="btn">Start Learning</a>
-        </div>
+      <section>
+        <h1><span>EMD</span> Divine Grace Graphic Design Learning Hub</h1>
 
-        <div class="card">
-          <h3>Typography</h3>
-          <p>
-            Understand how fonts communicate emotion, structure, and clarity in
-            design.
-          </p>
-          <ul>
-            <li>Font pairing</li>
-            <li>Type hierarchy</li>
-            <li>Spacing (kerning & leading)</li>
-            <li>Readability rules</li>
-          </ul>
-          <a href="{{url_for('typography')}}" class="btn">Start Learning</a>
-        </div>
+        <p>
+          Welcome to the EMD Divine Grace Graphic Design Learning Hub, a
+          structured platform dedicated to creative education in modern visual
+          design. This hub is designed for beginners, students, and aspiring
+          designers who want to build strong foundational and professional-level
+          design skills.
+        </p>
 
-        <div class="card">
-          <h3>Color Theory</h3>
-          <p>
-            Explore how colors interact and how to use them to create mood and
-            meaning in designs.
-          </p>
-          <ul>
-            <li>Color wheel basics</li>
-            <li>Complementary colors</li>
-            <li>Color psychology</li>
-            <li>Brand color selection</li>
-          </ul>
-          <a href="{{url_for('color')}}" class="btn">Start Learning</a>
-        </div>
+        <p>
+          Our focus is on the core principles of graphic design including layout
+          composition, typography, color theory, branding, and visual hierarchy.
+          Learners will develop the ability to create visually effective and
+          professional designs across digital and print media.
+        </p>
 
-        <div class="card">
-          <h3>Logo Design</h3>
-          <p>
-            Learn how to create simple, memorable, and meaningful brand
-            identities.
-          </p>
-          <ul>
-            <li>Logo types</li>
-            <li>Simplicity principles</li>
-            <li>Brand identity basics</li>
-            <li>Vector design</li>
-          </ul>
-          <a href="{{url_for('logo')}}" class="btn">Start Learning</a>
-        </div>
+        <p>
+          We emphasize practical, hands-on learning through real design concepts
+          such as logo creation, poster design, social media graphics, UI design
+          basics, and brand identity systems. This ensures that learners can
+          confidently apply theory to real-world design projects.
+        </p>
 
-        <div class="card">
-          <h3>UI/UX Design</h3>
-          <p>
-            Design user-friendly digital interfaces for websites and mobile
-            applications.
-          </p>
-          <ul>
-            <li>Wireframing</li>
-            <li>User experience flow</li>
-            <li>Prototyping</li>
-            <li>Design systems</li>
-          </ul>
-          <a href="{{url_for('uiux')}}" class="btn">Start Learning</a>
-        </div>
+        <p>
+          Graphic design is a powerful communication tool in modern digital
+          industries. This platform is built to help you master it with clarity,
+          creativity, and professional discipline.
+        </p>
+      </section>
 
-        <div class="card">
-          <h3>Software Skills</h3>
-          <p>
-            Master the essential tools used by professional graphic designers.
-          </p>
-          <ul>
-            <li>Adobe Photoshop</li>
-            <li>Adobe Illustrator</li>
-            <li>Figma basics</li>
-            <li>Canva design</li>
-          </ul>
-          <a href="{{url_for('software')}}" class="btn">Start Learning</a>
-        </div>
+      <section class="benefits">
+        <h2>Why Learn With EMD Divine Grace</h2>
 
-        <div class="card">
-          <h3>Branding & Identity</h3>
-          <p>
-            Learn how to build strong visual identities for businesses and
-            personal brands.
-          </p>
-          <ul>
-            <li>Brand strategy</li>
-            <li>Visual identity systems</li>
-            <li>Consistency in design</li>
-            <li>Brand storytelling</li>
-          </ul>
-          <a href="{{url_for('projects')}}" class="btn">Start Learning</a>
+        <div class="benefits__grid">
+          <div class="benefit__card">
+            <h3>Structured Learning</h3>
+            <p>
+              Courses are organized from beginner to advanced level for
+              progressive skill development.
+            </p>
+          </div>
+
+          <div class="benefit__card">
+            <h3>Creative Practice</h3>
+            <p>
+              Learn real-world design projects including branding, posters, and
+              UI concepts.
+            </p>
+          </div>
+
+          <div class="benefit__card">
+            <h3>Flexible Learning</h3>
+            <p>Study anytime and build your portfolio at your own pace.</p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="overview">
+        <h2 class="title">Structured Graphics Design Learning Pathways</h2>
+
+        <p>
+          Explore structured ultrasound modules designed to build your knowledge
+          from fundamental physics to advanced clinical applications. Each
+          section is carefully designed to help you understand image formation,
+          scanning techniques, and diagnostic interpretation across multiple
+          specialties in medical sonography.
+        </p>
+        <div class="overview-grid">
+          <div class="card">
+            <h3>Design Fundamentals</h3>
+            <p>
+              Learn the core principles of graphic design that guide every
+              visual creation, from layout to composition.
+            </p>
+            <ul>
+              <li>Balance & alignment</li>
+              <li>Contrast & hierarchy</li>
+              <li>Spacing & composition</li>
+              <li>Visual flow</li>
+            </ul>
+            <a href="design_fundamentals/fundamentals.html" class="btn"
+              >Start Learning</a
+            >
+          </div>
+
+          <div class="card">
+            <h3>Typography</h3>
+            <p>
+              Understand how fonts communicate emotion, structure, and clarity
+              in design.
+            </p>
+            <ul>
+              <li>Font pairing</li>
+              <li>Type hierarchy</li>
+              <li>Spacing (kerning & leading)</li>
+              <li>Readability rules</li>
+            </ul>
+            <a href="typography/typography.html" class="btn">Start Learning</a>
+          </div>
+
+          <div class="card">
+            <h3>Color Theory</h3>
+            <p>
+              Explore how colors interact and how to use them to create mood and
+              meaning in designs.
+            </p>
+            <ul>
+              <li>Color wheel basics</li>
+              <li>Complementary colors</li>
+              <li>Color psychology</li>
+              <li>Brand color selection</li>
+            </ul>
+            <a href="color/color.html" class="btn">Start Learning</a>
+          </div>
+
+          <div class="card">
+            <h3>Logo Design</h3>
+            <p>
+              Learn how to create simple, memorable, and meaningful brand
+              identities.
+            </p>
+            <ul>
+              <li>Logo types</li>
+              <li>Simplicity principles</li>
+              <li>Brand identity basics</li>
+              <li>Vector design</li>
+            </ul>
+            <a href="logo/logo.html" class="btn">Start Learning</a>
+          </div>
+
+          <div class="card">
+            <h3>UI/UX Design</h3>
+            <p>
+              Design user-friendly digital interfaces for websites and mobile
+              applications.
+            </p>
+            <ul>
+              <li>Wireframing</li>
+              <li>User experience flow</li>
+              <li>Prototyping</li>
+              <li>Design systems</li>
+            </ul>
+            <a href="uiux/uiux.html" class="btn">Start Learning</a>
+          </div>
+
+          <div class="card">
+            <h3>Software Skills</h3>
+            <p>
+              Master the essential tools used by professional graphic designers.
+            </p>
+            <ul>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Figma basics</li>
+              <li>Canva design</li>
+            </ul>
+            <a href="software.html" class="btn">Start Learning</a>
+          </div>
+
+          <div class="card">
+            <h3>Branding & Identity</h3>
+            <p>
+              Learn how to build strong visual identities for businesses and
+              personal brands.
+            </p>
+            <ul>
+              <li>Brand strategy</li>
+              <li>Visual identity systems</li>
+              <li>Consistency in design</li>
+              <li>Brand storytelling</li>
+            </ul>
+            <a href="branding/branding.html" class="btn">Start Learning</a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-
+      <p>&copy; 2026 <span>EMD</span> Divine Grace. All Rights Reserved.</p>
+      <p>Learn, Build and Grow</p>
     </footer>
   </body>
 </html>

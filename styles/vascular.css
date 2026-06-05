@@ -1,0 +1,215 @@
+/* =========== Root (Variables) =========== */
+:root {
+  --primary: #0ea5e9;
+  --secondary: #ff9d00;
+  --bg: #333;
+  --white: whitesmoke;
+
+  --small_padding: 2rem;
+  --btn_padding: 1.5rem 2rem;
+
+  --border-radius: 15px;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* =========== Reset =========== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+span {
+  color: var(--secondary);
+}
+
+h1,
+h2 {
+  margin-bottom: 2rem;
+}
+
+p,
+ul {
+  font-size: clamp(1.6rem, 2vh, 2.5rem);
+  line-height: 1.6;
+}
+
+/* =========== Main =========== */
+main {
+  margin: 0 3rem;
+}
+
+/* =========== Navbar =========== */
+#navbar__container {
+  background-color: var(--bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar__item {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__item a {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.navbar__item--logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+/* =========== Hero =========== */
+.hero {
+  margin-top: 15rem;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* =========== Section Header =========== */
+.section-header {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  margin: 0 auto;
+}
+
+/* =========== Courses =========== */
+.courses {
+  margin-top: 8rem;
+}
+.courses__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.courses__card {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  background: var(--white);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.courses__card h2,
+.contribute h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.courses__card ul {
+  list-style-position: inside;
+  margin-top: 1rem;
+}
+
+/* =========== Contribute =========== */
+.contribute {
+  margin-top: 8rem;
+}
+
+.contribute a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.contribute a:hover {
+  color: var(--secondary);
+}
+
+/* =========== Donate =========== */
+.donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, var(--primary), var(--bg));
+  color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.donate h2 {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+/* Donate and Courses button */
+.donate-btn,
+.courses__btn {
+  display: inline-block;
+  padding: var(--btn_padding);
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin: 2rem auto;
+  transition: opacity 0.3s;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: var(--btn_padding);
+  text-align: center;
+}
+
+.donate-btn:hover,
+.courses__btn:hover {
+  opacity: 0.9;
+}
+
+/* =========== Footer =========== */
+footer {
+  margin-top: 6rem;
+  background: var(--bg);
+  padding: var(--small_padding);
+}
+
+footer p {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.4rem;
+}
