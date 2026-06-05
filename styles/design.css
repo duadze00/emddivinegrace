@@ -1,0 +1,232 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Root */
+:root {
+  --primary-color: #1d4ed8;
+  --secondary--color: #ff8400;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+html {
+  font-size: 100%;
+}
+section {
+  margin: 1rem;
+}
+section p {
+  margin: 0 auto 1rem;
+  line-height: 1.7;
+}
+/* Navbar */
+.navbar__container {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__items--logo img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+.navbar__items button {
+  border: none;
+  color: white;
+  background: none;
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  margin: 3rem 1rem;
+  font-size: 3rem;
+}
+span {
+  color: var(--secondary--color);
+}
+
+/* ===== BENEFITS SECTION ===== */
+.benefits {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.benefit__card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.benefit__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.benefit__card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.benefit__card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 30px;
+  color: #0f172a;
+  font-weight: 700;
+}
+.subtitle {
+  text-align: center;
+  max-width: 750px;
+  margin: 10px auto 40px;
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ===== GRID LAYOUT ===== */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  padding: 20px 0 60px;
+  width: 100%;
+}
+
+/* ===== CARD DESIGN ===== */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  border: 1px solid #eef2f7;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* ===== CARD TITLE ===== */
+.card h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+/* ===== TEXT ===== */
+.card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* ===== LIST ===== */
+.card ul {
+  margin: 12px 0 18px;
+  padding-left: 18px;
+}
+
+.card ul li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--primary-color), #2563eb);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  transform: scale(1.03);
+}
+/* CTA */
+.cta {
+  background: linear-gradient(45deg, black, #1d4ed8);
+  text-align: center;
+  padding: 2rem 1rem;
+  color: white;
+  border-radius: 1rem;
+  min-width: 300px;
+}
+.cta h2 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.cta p {
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+.cta__button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  background: var(--secondary--color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  display: inline-block;
+}
+.cta__button:hover {
+  background: white;
+  color: black;
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: black;
+  padding: 2rem 0;
+}
+footer p {
+  color: white;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (min-width: 768px) {
+  section {
+    margin: 2rem;
+  }
+
+  .overview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
